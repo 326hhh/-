@@ -4,6 +4,7 @@
  * @note    提供舵机角度控制接口，内部封装 I2C 通信及寄存器操作
  */
 #include "pca9685.h"
+#include "i2c.h"
 
 /* ==================== 私有宏定义 ==================== */
 #define PCA9685_ADDR    (0x40 << 1)                 /**< 设备 I2C 写地址 (7位地址 0x40 左移 1 位) */
@@ -50,7 +51,7 @@ static void PCA9685_SetFreq(uint16_t freq)
     PCA9685_WriteReg(REG_MODE1, 0x10);           // 进入睡眠 (SLEEP=1, OSC 关闭)
     PCA9685_WriteReg(REG_PRESCALE, pre);         // 设置分频器
     PCA9685_WriteReg(REG_MODE1, 0xA0);           // 唤醒 (SLEEP=0) + 自动增量 (AI=1) + 重启 (RESTART=1)               
-    HAL_Delay(1);                                // 等待内部振荡器稳定 (>500µs
+    HAL_Delay(1);                                // 等待内部振荡器稳定 (>500µs）
 }
 
 /**
@@ -76,7 +77,7 @@ static void PCA9685_SetPWM_Raw(uint8_t ch, uint16_t on, uint16_t off)
 }
 
 /* ==================== 对外接口函数 ==================== */
-
+ 
 /**
  * @brief  初始化 PCA9685 模块（50Hz 推挽输出）
  * @note   调用后所有通道频率设置为 50Hz，输出模式为推挽，可直接驱动舵机
