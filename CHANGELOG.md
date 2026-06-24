@@ -2,7 +2,7 @@
 
 ## 2026-06-24
 - docs: 新增 地猛星MSPM0G3507 资料，包含原理图、引脚图
-- 添加 resource_links.md 商家资料网址
+- docs: 添加 resource_links.md 商家资料网址
 
 ## 2026-06-23
 - 新增 PCA9685 机械爪舵机驱动模块
