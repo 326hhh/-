@@ -3,22 +3,22 @@
 
 ## 目录结构
 ```
-├── components/    # 通用功能模块
-│ └── mechanical_claw_pca9685/ # PCA9685 机械爪舵机驱动
+├── components/                                    # 通用功能模块
+│ └── mechanical_claw_pca9685/                     # PCA9685 机械爪舵机驱动
 │ 
-├── examples/ # （预留）单模块测试 Demo、完整项目参考工程
+├── examples/                                      # （预留）单模块测试 Demo、完整项目参考工程
 │ 
-├── docs/ # （预留）芯片手册、开发笔记、编码规范
-│ └── #personal_log/ # 个人开发日志
-│ └── 地猛星MSPM0G3507资料/     # 开发板资料
-│     ├── resource_links.md     # 商家资料
+├── docs/                                          # 芯片手册、开发笔记、原理图
+│ └── #personal_log/                               # 个人开发日志
+│ └── 地猛星MSPM0G3507资料/                         # 开发板资料
+│     ├── resource_links.md                        # 商家资料
 │     ├── MSPM0G3507开发板原理图.pdf
 │     ├── MSPM0G3507管脚引脚图.jpg
 │     └── MSPM0G3507简介.jpg
 │
-├── bsp/ # （预留）不同芯片 / 开发板的底层板级适配
-└── README.md # 仓库总说明
-└── CHANGELOG.md         # 版本更新记录
+├── bsp/                                           # （预留）不同芯片 / 开发板的底层板级适配
+└── README.md                                      # 仓库总说明
+└── CHANGELOG.md                                   # 版本更新记录
 ```
 
 ## 已有模块清单
