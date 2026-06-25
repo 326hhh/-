@@ -88,3 +88,6 @@ echo "  cd ${PROJECT_PATH}/build"
 echo "  cmake -DOpenCV_DIR=/usr/local/lib/cmake/opencv4 .."
 echo "  make -j2"
 echo "  ./${PROJECT_NAME}"
+```
+
+## 编译opencv工程
