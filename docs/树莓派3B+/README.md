@@ -12,12 +12,12 @@
 
 ##### 命令格式:
 
-~/create_opencv_project.sh <工程名> <目标路径>
+    ~/create_opencv_project.sh <工程名> <目标路径>
 
 ##### 示例
 在 ~/pi/projects 目录下创建一个名为 test_demo 的工程:
 
-~/create_opencv_project.sh test_demo ~/pi/projects
+    ~/create_opencv_project.sh test_demo ~/pi/projects
 
 #### 脚本内部实现逻辑
 
@@ -92,3 +92,8 @@ echo "  make -j2"
 echo "  ./${PROJECT_NAME}"
 ```
 
+## 摄像头设置
+
+### 开启手动曝光
+
+    cap.set(cv::CAP_PROP_AUTO_EXPOSURE, 1.0);
