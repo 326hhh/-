@@ -18,6 +18,9 @@
 在 ~/pi/projects 目录下创建一个名为 test_demo 的工程:
 
     ~/create_opencv_project.sh test_demo ~/pi/projects
+或者在根目录下创建一个名为 test_demo 的工程：
+
+    ~/create_opencv_project.sh test_demo /
 
 #### 脚本内部实现逻辑
 
