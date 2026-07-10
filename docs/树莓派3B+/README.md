@@ -4,7 +4,7 @@
 
 ### 使用自动创建opencv工程脚本新建工程
 
-为了更好在树莓派上开发opencv，我使用豆包创建了create_opencv_project.sh自动化配置脚本，脚本位于根目录下。
+为了更好在树莓派上开发opencv，我使用AI创建了create_opencv_project.sh自动化配置脚本，脚本位于根目录下。
 
 #### 使用教程
 
