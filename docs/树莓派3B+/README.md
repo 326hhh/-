@@ -18,9 +18,6 @@
 在 ~/pi/projects 目录下创建一个名为 test_demo 的工程:
 
     ~/create_opencv_project.sh test_demo ~/pi/projects
-或者在根目录下创建一个名为 test_demo 的工程：
-
-    ~/create_opencv_project.sh test_demo /
 
 #### 脚本内部实现逻辑
 
@@ -49,9 +46,18 @@ fi
 # 拼接工程完整路径，自动创建不存在的父目录
 PROJECT_PATH="${PARENT_DIR}/${PROJECT_NAME}"
 mkdir -p "${PROJECT_PATH}"
+# 新增：判断目录创建是否成功
+if [ $? -ne 0 ]; then
+    echo "错误：无法创建目录 ${PROJECT_PATH}，权限不足！"
+    exit 1
+fi
 
 # 创建标准目录结构
-mkdir -p "${PROJECT_PATH}"/{inc,src,build,assets}
+mkdir -p "${PROJECT_PATH}/{inc,src,build,assets}"
+if [ $? -ne 0 ]; then
+    echo "错误：工程子目录创建失败，权限不足！"
+    exit 1
+fi
 
 # 生成 CMakeLists.txt
 cat > "${PROJECT_PATH}/CMakeLists.txt" << EOF_CMAKE
