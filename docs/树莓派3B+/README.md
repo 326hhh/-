@@ -80,7 +80,7 @@ int main() {
 }
 EOF_CPP
 
-echo "✅ 工程创建成功！"
+echo "工程创建成功！"
 echo "工程完整路径：${PROJECT_PATH}"
 echo ""
 ---
@@ -88,7 +88,7 @@ echo ""
 echo "编译运行命令："
 echo "  cd ${PROJECT_PATH}/build"
 echo "  cmake -DOpenCV_DIR=/usr/local/lib/cmake/opencv4 .."
-echo "  make -j2"
+echo "  make -j\$(nproc)"
 echo "  ./${PROJECT_NAME}"
 ```
 
